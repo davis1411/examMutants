@@ -8,5 +8,8 @@ public interface DnaSequenceService {
 
     Dna save(String dnaSequence, boolean isMutant);
 
-    List<Dna> getStatsDnaVerified();
+    List<Dna> getStatsDnaMutants();
+
+    List<Dna> getStatsDnaHumans();
+
 }

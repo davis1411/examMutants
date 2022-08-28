@@ -11,7 +11,7 @@ public class StatsController {
     private final StatsService statsService;
 
     @Autowired
-    public StatsController(StatsService statsService){
+    public StatsController(StatsService statsService) {
         this.statsService = statsService;
     }
 

@@ -1,10 +1,10 @@
 package com.mercadolibre.mutants.exception;
 
-public class ValidatorSequenceException extends Exception{
+public class ValidatorSequenceException extends Exception {
 
     private String message;
 
-    public ValidatorSequenceException(String message){
+    public ValidatorSequenceException(String message) {
         this.message = message;
     }
 
@@ -13,7 +13,7 @@ public class ValidatorSequenceException extends Exception{
     }
 
     @Override
-    public String getMessage(){
+    public String getMessage() {
         return message;
     }
 }

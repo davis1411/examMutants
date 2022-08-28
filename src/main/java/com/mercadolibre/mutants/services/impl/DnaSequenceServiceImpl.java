@@ -26,7 +26,12 @@ public class DnaSequenceServiceImpl implements DnaSequenceService {
     }
 
     @Override
-    public List<Dna> getStatsDnaVerified() {
-        return resultDnaRepository.findAll();
+    public List<Dna> getStatsDnaMutants() {
+        return resultDnaRepository.findByIsMutant(true);
+    }
+
+    @Override
+    public List<Dna> getStatsDnaHumans() {
+        return resultDnaRepository.findByIsMutant(false);
     }
 }

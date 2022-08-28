@@ -11,20 +11,30 @@ import java.util.List;
 @Service
 public class StatsServiceImpl implements StatsService {
     @Autowired
-    private  DnaSequenceServiceImpl dnaSequenceService ;
-    @Override
-    public StatsModel getStatsDnaVerified() {
-        List<Dna> dnaVerified = dnaSequenceService.getStatsDnaVerified();
-        return countMutant(dnaVerified);
+    private DnaSequenceServiceImpl dnaSequenceService;
+
+    public StatsServiceImpl(DnaSequenceServiceImpl dnaSequenceService) {
+        this.dnaSequenceService = dnaSequenceService;
     }
 
-    private StatsModel countMutant(List<Dna> dnaVerified) {
+    @Override
+    public StatsModel getStatsDnaVerified() {
+        List<Dna> dnaVerifiedMutants = dnaSequenceService.getStatsDnaMutants();
+        List<Dna> dnaVerifiedHumans = dnaSequenceService.getStatsDnaHumans();
+        return countMutant(dnaVerifiedMutants, dnaVerifiedHumans);
+    }
+
+    private StatsModel countMutant(List<Dna> dnaVerifiedMutants, List<Dna> dnaVerifiedHumans) {
         StatsModel statsModel = new StatsModel();
-        Long contMutant = dnaVerified.stream().filter(m -> m.getIsMutant()).count();
-        Long contHuman = dnaVerified.stream().filter(h -> !h.getIsMutant()).count();
-        Double ratio = (double)contMutant/contHuman;
-        statsModel.setCountMutantDna(contMutant);
-        statsModel.setCountHumanDna(contHuman);
+        Double ratio = 0.0;
+        int countMutants = dnaVerifiedMutants.size();
+        int countHumans = dnaVerifiedHumans.size();
+        if (countMutants > 0) {
+            ratio = (double) countMutants / countHumans;
+        }
+
+        statsModel.setCountMutantDna(countMutants);
+        statsModel.setCountHumanDna(countHumans);
         statsModel.setRatio(ratio);
         return statsModel;
     }

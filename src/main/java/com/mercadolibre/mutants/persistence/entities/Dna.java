@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name= "sequencedna")
+@Table(name = "sequencedna")
 public class Dna implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

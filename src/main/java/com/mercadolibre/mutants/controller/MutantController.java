@@ -18,7 +18,7 @@ public class MutantController {
     private final MutantService mutantService;
 
     @Autowired
-    public MutantController(MutantService mutantService){
+    public MutantController(MutantService mutantService) {
         this.mutantService = mutantService;
     }
 
@@ -28,20 +28,16 @@ public class MutantController {
     public ResponseEntity<String> detectMutant(@RequestBody List<String> dna) {
         ResponseEntity<String> responseEntity = null;
         try {
-            if(this.mutantService.isMutant(dna)){
+            if (this.mutantService.isMutant(dna)) {
                 responseEntity = new ResponseEntity<>(HttpStatus.OK);
-            }else{
+            } else {
                 responseEntity = new ResponseEntity<>(HttpStatus.FORBIDDEN);
             }
-        } catch (ValidatorSequenceException ex){
-            responseEntity = new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);
-        } catch (Exception e){
+        } catch (ValidatorSequenceException ex) {
+            responseEntity = new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
             log.error("Ocurrio un error detectando mutantes");
         }
-        return responseEntity ;
-    }
-    @GetMapping("/")
-    public String checkService() {
-        return "MutantController.java ok";
+        return responseEntity;
     }
 }
