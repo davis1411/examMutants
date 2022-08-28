@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "d3b118be-0f12-49ff-b44c-b281212f9622",
+		"name": "examMutants",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mutantOkSquared",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      \"ATGCGA\",\r\n      \"CAGTGC\",\r\n      \"TTATGT\",\r\n      \"AGAAGG\",\r\n      \"CCCCTA\",\r\n      \"TCACTG\"\r\n   ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutantOkRectangular",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      \"ATGCGA\",\r\n      \"CAGTGC\",\r\n      \"TTATGT\",\r\n      \"AGAAGG\",\r\n      \"CCCCTA\",\r\n      \"TCACTG\"\r\n   ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sequenceSizeColumnFail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      \"ATGCGA\",\r\n      \"CAGTGC\",\r\n      \"TTATGT\",\r\n      \"AGAAGG\",\r\n      \"CCCCTA\",\r\n      \"TCACTG\"\r\n   ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sequenceSizeRowFail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      \"ATGCGA\",\r\n      \"CAGTGC\",\r\n      \"TTATGT\",\r\n      \"AGAAGG\",\r\n      \"CCCCTA\",\r\n      \"TCACTG\"\r\n   ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sequenceWithLetterFail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      \"ATGCGA\",\r\n      \"CAGTGC\",\r\n      \"TTATGT\",\r\n      \"AGAAGG\",\r\n      \"CCCCTA\",\r\n      \"TCACTG\"\r\n   ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sequenceWithNumbersFail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      \"ATGCGA\",\r\n      \"CAGTGC\",\r\n      \"TTATGT\",\r\n      \"AGAAGG\",\r\n      \"CCCCTA\",\r\n      \"TCACTG\"\r\n   ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sequenceSizeFail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      \"ATGCGA\",\r\n      \"CAGTGC\",\r\n      \"TTATGT\",\r\n      \"AGAAGG\",\r\n      \"CCCCTA\",\r\n      \"TCACTG\"\r\n   ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/mutant",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://mutant-env.eba-6xx9ay9m.us-east-1.elasticbeanstalk.com/stats",
+					"protocol": "http",
+					"host": [
+						"mutant-env",
+						"eba-6xx9ay9m",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
